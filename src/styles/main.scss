@@ -1,0 +1,48 @@
+@import "./variables";
+
+@import "./vendor/vendor";
+
+@import "./modules/modules";
+
+@import "./states/states";
+
+@import "./shared";
+
+@import "./pages/pages";
+
+@import "./components/components";
+
+@import "./media";
+
+.video-wrap{
+  height: inherit;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  &::before{
+    content: '';
+    background-color: rgba(255,255,255,0.47);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+  }
+  .main-video{
+    left: 50%;
+    min-height: 100%;
+    min-width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.article-content > p,
+.article-content{
+  text-align:justify;
+}
+.hyphenate{
+  visibility: visible !important;
+}

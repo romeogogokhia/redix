@@ -1,0 +1,56 @@
+// This mixin can be used to set the object-fit:
+// @include object-fit(contain);
+// or object-fit and object-position:
+// @include object-fit(cover, top);
+@mixin object-fit($fit: fill, $position: null) {
+  -o-object-fit: $fit;
+  object-fit: $fit;
+  @if $position {
+    -o-object-position: $position;
+    object-position: $position;
+    font-family: 'object-fit: #{$fit}; object-position: #{$position}';
+  } @else {
+    font-family: 'object-fit: #{$fit}';
+  }
+}
+
+//transitions mixin
+@mixin transition-mix($property: all, $duration: 0.2s, $timing: linear, $delay: 0s) {
+  transition-property: $property;
+  transition-duration: $duration;
+  transition-timing-function: $timing;
+  transition-delay: $delay;
+}
+
+//position absolute mixin
+@mixin position-absolute($top: null, $left: null, $right: null, $bottom: null) {
+  position: absolute;
+  top: $top;
+  left: $left;
+  right: $right;
+  bottom: $bottom;
+}
+
+/* mixin for multiline */
+$font-size-14: 14px;
+$line-height: 1.4;
+$lines-to-show: 3;
+@mixin multiLineEllipsis($font-size-14: 14px, $lines-to-show: 3, $line-height: 1.4) {
+  display: block;
+  display: -webkit-box;
+  height: $font-size-14 * $line-height * $lines-to-show;
+  font-size: $font-size-14;
+  line-height: $line-height;
+  -webkit-line-clamp: $lines-to-show;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* mixin for placeholder */
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &::-moz-placeholder          {@content}
+  &:-moz-placeholder           {@content}
+  &:-ms-input-placeholder      {@content}
+}

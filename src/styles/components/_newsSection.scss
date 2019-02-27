@@ -1,0 +1,81 @@
+.news-box{
+  background-color: rgba($white, .6);
+  //width: 787px;
+  //height: 860px;
+  width: $news-box-width;
+  height: $news-box-height;
+  //margin-left: 125px;
+  margin-left: $news-box-m-l;
+  //padding: 50px 45px;
+  padding: $news-box-p-v $news-box-p-h;
+  .sections-heading{
+    color: $black;
+    //margin-bottom: 60px;
+    margin-bottom: $footer-heading-m-b;
+    &--span{
+      display: block;
+      @include media-breakpoint-down(xs){
+        display: inline;
+      }
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin: auto;
+    width: 85%;
+    height: 85%;
+  }
+  @include media-breakpoint-down(xs){
+    width: 100%;
+  }
+}
+
+.news-card{
+  display: flex;
+  margin-bottom: $news-card-m-b;
+  &--right{
+    max-width: 525px;
+    margin-left: 20px;
+    &:hover{
+      text-decoration: underline;
+    }
+    &--street{
+      color: $black;
+      font:{
+        family: $Helvetica_cyr-Bold;
+        size: $font-size-24;
+      }
+      @include media-breakpoint-down(lg){
+        font-size: calc(100% - 2px);
+      }
+      @include media-breakpoint-down(xs){
+        margin-bottom: 0;
+      }
+    }
+    &--description{
+      color: $light-grey;
+      font:{
+        family: $Helvetica;
+        size: $font-size-24;
+      }
+      @include multiLineEllipsis($font-size-24, 4, 1.4);
+      //text-align: justify;
+      @include media-breakpoint-down(lg){
+        font-size: $font-size-14;
+        height: $font-size-14 * $line-height * $lines-to-show;
+      }
+    }
+  }
+}
+.date-box{
+  background-color: $black-transparent;
+  min-width: $date-box-width;
+  height: $date-box-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  font:{
+    family: $Museo100-Regular;
+    size: $date-font-size;
+  }
+}

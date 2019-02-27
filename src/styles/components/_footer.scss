@@ -1,0 +1,40 @@
+.footer-block{
+  padding: 1.25rem 0;
+}
+.FooterEnd{
+  background-color: $black;
+  height: $footerEnd-height;
+  @include media-breakpoint-down(sm){
+    height: 73px;
+  }
+  .footer-block{
+    @include media-breakpoint-down(sm){
+      padding: 1rem 0 0;
+    }
+  }
+}
+.copyright{
+  color: rgba($white, .5);
+  font:{
+    //family: $NotoSansGeorgian-Medium;
+    size: $font-size-24;
+    weight: 400;
+  }
+  @include media-breakpoint-down(lg){
+    font-size: 1rem;
+  }
+}
+.design-by{
+  max-width: 6.125rem;
+  object-fit: contain;
+  height: 38px;
+  @include media-breakpoint-down(md){
+    max-width: 5.5rem;
+  }
+  @include media-breakpoint-down(sm){
+    max-width: 4.7rem;
+  }
+  @include media-breakpoint-down(xs){
+    max-width: 4rem;
+  }
+}

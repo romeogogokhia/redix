@@ -1,0 +1,127 @@
+.hamburger-top{
+  position: absolute;
+  right: 0;
+  top: 25px;
+  display: none;
+  z-index: 333;
+  @include media-breakpoint-down(sm){
+    display: block;
+  }
+}
+//.navbar-nav{
+//  @include media-breakpoint-down(sm){
+//    display: none;
+//  }
+//}
+
+.news-active::before {
+  animation: vertical-line 2s linear forwards;
+  background-color: #bb2028;
+  content: '';
+  //height: calc(100% + #{$news-active-v-line});
+  position: absolute;
+  top: -108px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+
+  @include media-breakpoint-down(md){
+    animation: vertical-line-sm 2s linear forwards;
+    //height: calc(100% + #{$news-active-v-line - 2.3rem});
+    top: -74px;
+  }
+  @include media-breakpoint-down(xs){
+    content: none;
+  }
+}
+
+@keyframes vertical-line {
+  0%{
+    height: 0%
+  }
+  100%{
+    height: calc(100% + #{$news-active-v-line});
+  }
+}
+@keyframes vertical-line-sm {
+  0%{
+    height: 0%
+  }
+  100%{
+    height: calc(100% + #{$news-active-v-line - 2.3rem});
+  }
+}
+
+.strategy-active::before {
+  animation: vertical-line-2 2s linear forwards;
+  background-color: #bb2028;
+  content: '';
+  //height: calc(100% + #{$strategy-active-v-line});
+  position: absolute;
+  top: -6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  @include media-breakpoint-down(xs){
+    content: none;
+  }
+}
+@keyframes vertical-line-2 {
+  0%{
+    height: 0%
+  }
+  100%{
+    height: calc(100% + #{$strategy-active-v-line});
+  }
+}
+
+
+.sYears-active::before {
+  animation: vertical-line-3 2s linear forwards;
+  background-color: #bb2028;
+  content: '';
+  //height: calc(100% + #{$sYears-active-v-line});
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  @include media-breakpoint-down(xs){
+    content: none;
+  }
+}
+@keyframes vertical-line-3 {
+  0%{
+    height: 0%
+  }
+  100%{
+    height: calc(100% + #{$sYears-active-v-line});
+  }
+}
+
+.businessCenter-active::before {
+  animation: vertical-line-4 5s linear forwards;
+  background-color: #bb2028;
+  content: '';
+  position: absolute;
+  top: -4.6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  @include media-breakpoint-down(xs){
+    content: none;
+  }
+}
+
+@keyframes vertical-line-4 {
+  0%{
+    height: 0%
+  }
+  100%{
+    height: calc(100% + #{$businessCenter-active-v-line});
+  }
+}
+
+.is-overflow-hidden{
+  overflow: hidden;
+}

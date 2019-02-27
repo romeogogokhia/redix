@@ -1,0 +1,95 @@
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1300px
+);
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1140px,
+        xxl: 1670px
+);
+
+// text
+$black: black;
+$white: white;
+$header-black: #050708;
+$light-grey: #2e2e2e;
+
+// colors
+$red-scroll: #bb2028;
+$red-border: #b9232d;
+
+$red-transparent: rgba($red-scroll, 0.79);
+$grey-transparent: rgba(#232323, 0.65);
+$black-transparent: rgba($black, 0.79);
+$footer-bg: #f4f4f4;
+
+// fonts
+$HelveticaBold: font1, sans-serif;
+$Helvetica: font2, sans-serif;
+$Helvetica_cyr-Bold: font3, sans-serif;
+$Notosans: font4, arial;
+$Museo100-Regular: font5, sans-serif;
+$NotoSansGeorgian-Medium: font6, sans-serif;
+$Museo300-Regular: font7, sans-serif;
+$Helvetica-Oblique: font8, sans-serif;
+$Font9: font9, sans-serif;
+
+
+$nav-link-size: 1.2rem;
+$header-nav-link-color: #393939;
+$header--description: 2.7vw;
+
+$slider-height: 43.35417vw;
+$sections-heading-font-size: 2.7vw;
+$font-size-24: 1.1vw;
+$footer-heading-size: 1.48vw;
+$footer-heading-m-b: 2.9vw;
+$footer-info-link-size: .9vw;
+$input-placeholder-size: 0.78vw;
+
+$read-arrow-width: 4.8vw;
+$footer-logo-width: 8.5vw;
+$socialNav-img-size: 2.1875vw;
+$socialNav-link-m-l: 0.8vw;
+
+$news-active-v-line: 8.3rem;
+$strategy-active-v-line: 9rem;
+//$ourStrategy-active-v-line: 2.3rem;
+$sYears-active-v-line: 2.3rem;
+$businessCenter-active-v-line: 6.9rem;
+
+$news-box-height: 38.5vw;
+$news-box-width: 40.989583333333336vw;
+$news-box-m-l: 6.510416666666667vw;
+$news-box-p-v: 2.1vw;
+$news-box-p-h: 2.34375vw;
+$news-box-m-l: 6.510416666666667vw;
+$news-card-m-b: 2.2916666666666665vw;
+$date-box-height: 4.9vw;
+$date-box-width: 5.55208vw;
+$date-font-size: 4vw;
+
+
+$s-news--header-height: 50vw;
+
+$s-read-height: 50.520833333333336vw;
+$s-read-width: 91.66666666666667vw;
+$s-footer-info-height: 32vw;
+$footerEnd-height: 9vw;
+
+$procent: 100%;
+$height: 8.3rem;
+
+
+$menu-active: #a0252c;
+$menu-hover: #000000;
+
+
+$red-date-bg: #a0252c;
+$load-more-color: #b85c61;

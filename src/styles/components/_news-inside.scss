@@ -1,0 +1,189 @@
+.article-content-img{
+  display: block;
+  height: 27vw;
+  margin:{
+    left: auto;
+    right: auto;
+    bottom: .7rem;
+  }
+  @include media-breakpoint-down(xl){
+    height: auto;
+  }
+}
+.news-date{
+  color: black;
+  font:{
+    family: $Helvetica-Oblique;
+    size: 14px;
+    style: initial;
+  }
+  margin-bottom: 1rem;
+}
+.other-news{
+  @include responsive-font-size(1.3rem);
+  margin: 5vw 0 3vw;
+  position: relative;
+  &::before{
+    content: '';
+    background-color: #bb2028;
+    height: 3vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    top: -3.5vw;
+    @include media-breakpoint-down(sm){
+      height: 1.5rem;
+      top: -1.7rem;
+    }
+  }
+  &::after{
+    @include media-breakpoint-down(xs) {
+      content: '';
+      background-color: #bb2028;
+      height: 1.5rem;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      bottom: -1.7rem;
+    }
+  }
+  @include media-breakpoint-down(sm){
+    margin: 3rem 0 2.5rem;
+  }
+  @include media-breakpoint-down(xs){
+    margin: 3rem 0 3rem;
+  }
+  &--inner{
+    color: #000;
+    font-family: $Helvetica_cyr-Bold;
+    margin: 0;
+  }
+}
+.news-inside-1{
+  &::after{
+    height: 3vw;
+    bottom: -1vw;
+
+    @include media-breakpoint-down(sm){
+      content: '';
+      position: absolute;
+      height: 1.5rem;
+      bottom: .7rem;
+    }
+  }
+  padding-bottom: 0;
+  .article-heading{
+    text-overflow: unset;
+    overflow: unset;
+    white-space: pre-wrap;
+  }
+}
+
+.news-inside-2{
+  padding-bottom: 15.625rem;
+  @include media-breakpoint-down(sm){
+    padding-bottom: 9.07rem;
+  }
+  //@include media-breakpoint-down(xs){
+  //  padding-bottom: 9rem;
+  //}
+  .img-wrap{
+    position: relative;
+    .red-date,
+    .date-box{
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 123;
+    }
+    .red-date{
+      background-color: $red-date-bg;
+      color: white;
+      font-family: $Helvetica;
+      @include responsive-font-size(1rem);
+      bottom: 2rem;
+      padding: .3rem .65rem;
+      line-height: .87;
+      @include media-breakpoint-down(md){
+        @include responsive-font-size(.9rem);
+      }
+      @include media-breakpoint-down(sm){
+        bottom: 1rem;
+      }
+    }
+    .date-box{
+      background-color: rgba(0, 0, 0, 0.6);
+      font-size: 3vw;
+      min-width: 3.8vw;
+      height: 3.3vw;
+      top: 2rem;
+      @include media-breakpoint-down(sm){
+        top: 1rem;
+      }
+      @include media-breakpoint-down(xs){
+        min-width: 2.4rem;
+        height: 2.2rem;
+        @include responsive-font-size(1.8rem)
+      }
+    }
+    .sections-heading{
+      text-align: center;
+      @include multiLineEllipsis(1.5rem, 3, 1.4);
+      @include media-breakpoint-down(xl){
+        @include multiLineEllipsis(1.4rem, 3, 1.4);
+      }
+      @include media-breakpoint-down(lg){
+        @include multiLineEllipsis(1.2rem, 3, 1.4);
+      }
+      @include media-breakpoint-down(md){
+        @include multiLineEllipsis(1rem, 3, 1.4);
+      }
+      @include media-breakpoint-down(sm){
+        @include multiLineEllipsis(.9rem, 3, 1.4);
+      }
+    }
+  }
+}
+
+.load-more-wrap{
+  position: relative;
+  margin-top: 4.7rem;
+  width: 100%;
+  &::after{
+    content: '';
+    width: 2px;
+    background-color: $red-scroll;
+    height: 6rem;
+    top: -6.7rem;
+    left: 50%;
+    position: absolute;
+    transform: translateX(-50%);
+    @include media-breakpoint-down(sm){
+      height: 3rem;
+      margin-top: 1.5rem;
+      top: -4.5rem;
+    }
+    //@include media-breakpoint-down(xs){
+    //  content: none;
+    //}
+  }
+  @include media-breakpoint-down(sm){
+    margin-top: 1.3rem;
+  }
+}
+.load-more-title{
+  text-align: center;
+  & > a{
+    color: $load-more-color;
+    font-family: $Museo100-Regular;
+    @include responsive-font-size(1.5rem);
+    text-transform: capitalize;
+  }
+}
+.load-more-arrow{
+  display: block;
+  margin: 1rem auto .7rem auto;
+  width: 1.1rem;
+}

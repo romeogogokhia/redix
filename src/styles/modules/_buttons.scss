@@ -1,0 +1,117 @@
+.arrow-container {
+  cursor: pointer;
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 8vw;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 112;
+  @include media-breakpoint-down(lg) {
+    bottom: 3rem;
+  }
+  //@include media-breakpoint-down(xs) {
+  //  display: none;
+  //}
+}
+.bottom-vertical-line{
+  position: relative;
+  width: 100%;
+  &:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    //height: 19rem;
+    height: 118px;
+    width: 2px;
+    background: $red-scroll;
+    @include media-breakpoint-up(md) {
+      height: 15vw;
+    }
+  }
+}
+
+//.read-more_arrow
+.read-more_arrow{
+  margin-left: 1.0416666666666667vw;
+  max-width: $read-arrow-width;
+}
+
+.back-to-top {
+  position: absolute;
+  //bottom: -226px;
+  bottom: -163px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: $red-scroll;
+  font: {
+    family: $Museo300-Regular;
+    size: 1.2rem;
+    weight: 400;
+  }
+  @include media-breakpoint-down(lg) {
+    font-size: 20px;
+  }
+  @include media-breakpoint-down(md) {
+    font-size: 18px;
+  }
+  @include media-breakpoint-down(sm) {
+    bottom: -125px;
+  }
+  //@include media-breakpoint-down(xs) {
+  //  display: none;
+  //}
+}
+
+.plus-size{
+  cursor: pointer;
+  display: block;
+  height: 2rem;
+  width: 2rem;
+  @include media-breakpoint-down(sm){
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.view-btn{
+  color: $red-scroll;
+  font-family: $Helvetica-cyr-Bold;
+  @include responsive-font-size(1.1rem);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, .5);
+  background-color: transparent;
+  padding: 0.5rem 1.5rem;
+  text-transform: capitalize;
+  -webkit-appearance: none !important;
+}
+
+// hamburger
+.hamburger.hamburger-top{
+  outline: none;
+  padding: 7.5px;
+  right: 10px;
+}
+.hamburger-top{
+  .hamburger-box{
+    width: 30px;
+    height: 24px;
+  }
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after{
+    width: 30px;
+    height: 4px;
+  }
+  &.hamburger.is-active .hamburger-inner,
+  &.hamburger.is-active .hamburger-inner::before,
+  &.hamburger.is-active .hamburger-inner::after {
+    background-color: white;
+  }
+  &.hamburger.is-active:hover{
+    opacity: 1;
+  }
+}

@@ -1,0 +1,123 @@
+.header--description{
+  font:{
+    family: $Helvetica;
+    //size: 4rem;
+  }
+  color: $header-black;
+  max-width: 44rem;
+  text-align: center;
+  @include multiLineEllipsis($header--description, 3, 1.15);
+  @include media-breakpoint-down(lg){
+    max-width: 40rem;
+    @include multiLineEllipsis(2.5rem, 3, 1.15);
+  }
+  @include media-breakpoint-down(md){
+    @include multiLineEllipsis(2rem, 3, 1.15);
+  }
+  @include media-breakpoint-down(sm){
+    max-width: 80%;
+    margin-top: 3rem;
+  }
+  @include media-breakpoint-down(xs){
+    //font-size: 1.5rem;
+    margin-top: 1rem;
+    max-width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    @include multiLineEllipsis(1.5rem, 3, 1.15);
+  }
+}
+.header--content{
+  //padding-top: 6.75rem;
+  padding-top: 5.625vw;
+  z-index: 1;
+  width: 100%;
+  @include media-breakpoint-up(sm){
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include media-breakpoint-down(xs){
+    padding-top: 34px;
+  }
+}
+.logo{
+  max-width: 16vw;
+  @include media-breakpoint-down(xs){
+    max-width: 110px;
+  }
+}
+.logo-parent-link{
+  display: inline-block;
+  @include media-breakpoint-down(sm) {
+    //margin:{
+    //  left: 15px;
+    //}
+  }
+  & > .nav-logo,
+  & > .logo{
+    @include media-breakpoint-down(sm) {
+      position: absolute;
+      padding: 0 !important;
+      transform: none !important;
+      left: 17.5px !important;
+      top: 33px !important;
+      z-index: 333;
+    }
+  }
+}
+
+.header-img-overflow{
+  height: inherit;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  @include media-breakpoint-down(sm){
+    overflow: unset;
+  }
+}
+.header-img{
+  height: 100%;;
+  background:{
+    //attachment: fixed;
+    repeat: repeat;
+    size: cover;
+  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  animation: zoomin 30s ease-in infinite;
+  transition: all .5s ease-in-out;
+  //overflow: hidden;
+  width: 100%;
+  @include media-breakpoint-down(sm){
+    background-attachment: scroll;
+  }
+  &::after{
+    content: '';
+    background-color: rgba(white, 0.47);
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+  @include media-breakpoint-down(sm){
+    animation: none;
+  }
+}
+
+@keyframes zoomin {
+  0% {transform: scale(1);}
+  25% {transform: scale(1.03);}
+  50% {transform: scale(1.07);}
+  75% {transform: scale(1.1);}
+  100% {transform: scale(1);}
+}
+
+

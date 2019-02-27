@@ -1,0 +1,39 @@
+.horeca-1{
+  padding: 1rem 15px 0;
+  & > .left-block{
+    align-items: flex-end;
+    min-height: 28.125rem;
+
+    @include media-breakpoint-down(sm){
+      min-height: auto;
+      margin-top: 1rem;
+    }
+  }
+  & > .right-block{
+  }
+}
+.club-71-icon{
+  padding: .333rem 0 .71rem;
+  background-color: white;
+  &--img{
+    display: block;
+    margin: auto;
+    width: 8rem;
+    @include object-fit(cover, center)
+  }
+}
+.view-btn-wrap{
+  @include position-absolute($top: 67%, $left: 50%);
+  transform: translate(-50%, -67%);
+  z-index: 111;
+}
+.center-block{
+  margin-bottom: 11.875rem;
+  @include media-breakpoint-down(sm){
+    margin-bottom: 8.875rem;
+  }
+  //@include media-breakpoint-down(xs){
+  //  margin-bottom: 0;
+  //}
+}
+
