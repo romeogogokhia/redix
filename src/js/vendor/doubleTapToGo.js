@@ -40,4 +40,7 @@
 // init doubleTapToGo
 $(function () {
   $('.navigation li:has(ul)').doubleTapToGo()
+  if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+    $('.flexbox-slide:has(.flexbox-slide-link)').doubleTapToGo()
+  }
 })

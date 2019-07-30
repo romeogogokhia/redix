@@ -1,0 +1,8 @@
+.load-more-wrap-mod{
+  @include media-breakpoint-down(sm) {
+    margin-top: 4.3rem;
+  }
+}
+.header, .header-img-overflow, .header-img, .header-img::after{
+  height: 100vh;
+}

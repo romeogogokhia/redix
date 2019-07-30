@@ -1,5 +1,5 @@
 $(function () {
-  $('.flexbox-slide').on('click mouseover', function () {
+  $('.flexbox-slide').on('click mouseover', function (e) {
     $('.flexbox-slide').css({
       transition: '4s', flexShrink: '1', width: '20%', animation: 'none'
     })

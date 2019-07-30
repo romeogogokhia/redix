@@ -113,7 +113,7 @@
   &--description {
     //font-size: 1.333125rem;
     font-size: $footer-info-link-size;
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.8rem;
     @include media-breakpoint-down(xl) {
       font-size: 12px;
     }
